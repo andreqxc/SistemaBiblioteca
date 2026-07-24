@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Custom navbar styles to match requested design */
+.navbar {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.navbar .app-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  margin-right: 1.5rem;
+  border-bottom: 2px solid transparent; /* for spacing */
+}
+.navbar .app-title:hover {
+  text-decoration: none;
+}
+.navbar-nav .nav-link {
+  color: #222 !important;
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #000 !important;
+}
+
+/* Hero section on home page */
+.main-hero { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.main-hero .hero-title { font-size: 3.25rem; font-weight: 700; }
+.main-hero .hero-sub { color: #6c757d; margin-top: 0.5rem; }
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
