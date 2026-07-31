@@ -1,0 +1,46 @@
+@model List<Biblioteca.Models.Libro>
+
+@{
+    ViewData["Title"] = "Libros";
+    var autores = Biblioteca.Controllers.AutoresController.Autores;
+}
+
+<h2>Lista de Libros</h2>
+
+<a asp-action="Create" class="btn btn-success mb-3">Agregar Libro</a>
+
+<div class="row">
+    @foreach (var libro in Model)
+    {
+        var autor = autores.FirstOrDefault(a => a.Id == libro.AutorId);
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="@(string.IsNullOrEmpty(libro.ImagenUrl) ? "/images/sin-imagen.png" : libro.ImagenUrl)"
+                     class="card-img-top" alt="@libro.Titulo" style="height:220px;object-fit:cover" />
+                <div class="card-body">
+                    <h5 class="card-title">@libro.Titulo</h5>
+                    <p class="card-text">
+                        @libro.Genero (@libro.Anio)<br />
+                        Autor: @(autor != null ? autor.Nombre + " " + autor.Apellido : "N/A")
+                    </p>
+                    @if (libro.Disponible)
+                    {
+                        <span class="badge bg-success">Disponible</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">No disponible</span>
+                    }
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a asp-action="Details" asp-route-id="@libro.Id" class="btn btn-sm btn-info">Ver</a>
+                    <a asp-action="Edit" asp-route-id="@libro.Id" class="btn btn-sm btn-primary">Editar</a>
+                    <form asp-action="Delete" asp-route-id="@libro.Id" method="post"
+                          onsubmit="return confirm('¿Eliminar @libro.Titulo?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

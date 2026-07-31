@@ -15,6 +15,7 @@
             <th>Nacionalidad</th>
             <th>Fecha de Nacimiento</th>
             <th>Estado</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +36,13 @@
                     {
                         <span class="badge bg-danger">Inactivo</span>
                     }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@autor.Id" class="btn btn-sm btn-primary">Editar</a>
+                    <form asp-action="Delete" asp-route-id="@autor.Id" method="post" style="display:inline"
+                          onsubmit="return confirm('¿Eliminar a @autor.Nombre @autor.Apellido?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                    </form>
                 </td>
             </tr>
         }
