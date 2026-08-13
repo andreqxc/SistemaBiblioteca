@@ -1,6 +1,64 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Acerca de";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<article class="about-page">
+    <header class="about-header">
+        <h1>Acerca de nuestra Biblioteca Virtual</h1>
+        <p class="about-lead">
+            Conectamos lectores con libros, autores y categorías desde una plataforma
+            construida con ASP.NET Core MVC.
+        </p>
+    </header>
+
+    <section class="about-section" aria-labelledby="mision-heading">
+        <h2 id="mision-heading">Nuestra misión</h2>
+        <p>
+            Facilitar el acceso a la lectura mediante un catálogo digital organizado por
+            libros, autores y categorías, acompañado de un sistema de préstamos simple
+            y transparente para toda la comunidad.
+        </p>
+    </section>
+
+    <section class="about-section" aria-labelledby="servicios-heading">
+        <h2 id="servicios-heading">Servicios bibliotecarios</h2>
+        <div class="about-grid">
+            <article class="about-card">
+                <h3>Catálogo de libros</h3>
+                <p>Consulta título, género, año de publicación y disponibilidad de cada obra.</p>
+            </article>
+            <article class="about-card">
+                <h3>Perfiles de autores</h3>
+                <p>Conoce nacionalidad, fecha de nacimiento y obras registradas de cada autor.</p>
+            </article>
+            <article class="about-card">
+                <h3>Categorías temáticas</h3>
+                <p>Navega el catálogo agrupado por género: novela, ciencia, historia e infantil.</p>
+            </article>
+            <article class="about-card">
+                <h3>Gestión de préstamos</h3>
+                <p>Solicita, renueva y consulta el estado de tus préstamos activos.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="historia-heading">
+        <h2 id="historia-heading">Nuestra historia</h2>
+        <p>
+            Este proyecto nació como una biblioteca de hardware académico y evolucionó hacia
+            una biblioteca virtual completa, incorporando gestión de usuarios, autores y
+            préstamos sobre una arquitectura MVC.
+        </p>
+    </section>
+
+    <aside class="about-aside" aria-labelledby="contacto-heading">
+        <h2 id="contacto-heading">Contacto</h2>
+        <p>¿Tienes dudas o sugerencias de libros? Escríbenos a
+            <a href="mailto:biblioteca@ejemplo.com">biblioteca@ejemplo.com</a>.
+        </p>
+    </aside>
+
+    <footer class="about-footer">
+        <p>Biblioteca Virtual &mdash; construida con HTML5 semántico, CSS3 y Bootstrap.</p>
+    </footer>
+</article>

@@ -2,11 +2,187 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div class="container main-hero">
-    <div class="row">
-        <div class="col-md-6 offset-md-6 text-md-end">
-            <h1 class="hero-title">Biblioteca De Hardware</h1>
-            <p class="hero-sub">Bienvenidos a la biblioteca Con Asp.Net.Core usando MVC</p>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <span class="badge bg-primary-subtle text-primary-emphasis mb-3">Biblioteca Virtual</span>
+                <h1 class="hero-title">Miles de libros, autores y categorías al alcance de un clic</h1>
+                <p class="hero-sub">
+                    Explora nuestro catálogo, descubre nuevos autores y gestiona tus préstamos
+                    desde una plataforma pensada para lectores.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mt-4">
+                    <a asp-controller="Libros" asp-action="Index" class="btn btn-primary btn-lg">Explorar libros</a>
+                    <a asp-controller="Autores" asp-action="Index" class="btn btn-outline-secondary btn-lg">Ver autores</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="~/images/376af393-0169-41c4-8856-eea8986f8a1f.jpg" class="img-fluid rounded-4 shadow hero-img" alt="Estantería de libros de la biblioteca">
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="container my-5">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+        <h2 class="section-title mb-0">Libros destacados</h2>
+        <a asp-controller="Libros" asp-action="Index" class="link-primary text-decoration-none">Ver todos &rarr;</a>
+    </div>
+    <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card book-card h-100">
+                <img src="~/images/37f135bf-179a-42ba-bd1a-2355217b32f8.jpg" class="card-img-top" alt="Portada de libro destacado">
+                <div class="card-body">
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis mb-2">Ficción</span>
+                    <h3 class="h6 card-title">Cien Años de Soledad</h3>
+                    <p class="card-text small text-muted">Gabriel García Márquez</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pt-0">
+                    <span class="badge text-bg-success">Disponible</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card book-card h-100">
+                <img src="~/images/38f462b2-9ab2-4b73-bec7-77948ec07858.jpg" class="card-img-top" alt="Portada de libro destacado">
+                <div class="card-body">
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis mb-2">Clásico</span>
+                    <h3 class="h6 card-title">Don Quijote de la Mancha</h3>
+                    <p class="card-text small text-muted">Miguel de Cervantes</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pt-0">
+                    <span class="badge text-bg-success">Disponible</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card book-card h-100">
+                <img src="~/images/d75ebcb3-96dc-4c2e-aaf9-eadcd46fa76e.jpg" class="card-img-top" alt="Portada de libro destacado">
+                <div class="card-body">
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis mb-2">Poesía</span>
+                    <h3 class="h6 card-title">Veinte Poemas de Amor</h3>
+                    <p class="card-text small text-muted">Pablo Neruda</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pt-0">
+                    <span class="badge text-bg-warning">Prestado</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card book-card h-100">
+                <img src="~/images/376af393-0169-41c4-8856-eea8986f8a1f.jpg" class="card-img-top" alt="Portada de libro destacado">
+                <div class="card-body">
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis mb-2">Ensayo</span>
+                    <h3 class="h6 card-title">El Laberinto de la Soledad</h3>
+                    <p class="card-text small text-muted">Octavio Paz</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pt-0">
+                    <span class="badge text-bg-success">Disponible</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Explora por categoría</h2>
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="card category-card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-book fs-1 text-primary category-icon">📖</i>
+                        <h3 class="h6 mt-3">Novela</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card category-card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="category-icon">🔬</i>
+                        <h3 class="h6 mt-3">Ciencia</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card category-card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="category-icon">🏛️</i>
+                        <h3 class="h6 mt-3">Historia</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card category-card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="category-icon">🧒</i>
+                        <h3 class="h6 mt-3">Infantil</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <h2 class="section-title mb-4">Preguntas frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Cómo puedo solicitar un préstamo?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Desde la sección <strong>Libros</strong> selecciona el título disponible y
+                            crea la solicitud de préstamo; el equipo bibliotecario confirmará la entrega.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            ¿Cuánto dura un préstamo?
+                        </button>
+                    </h3>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            El plazo estándar es de 15 días, renovables una vez si nadie más lo ha reservado.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            ¿Puedo sugerir un libro nuevo?
+                        </button>
+                    </h3>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, escríbenos desde la página <strong>Acerca de</strong> y evaluaremos incorporarlo al catálogo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h2 class="section-title mb-4">Novedades</h2>
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <span class="me-2">📚</span>
+                <div>Ya puedes reservar libros en línea y recogerlos en cualquier sede.</div>
+            </div>
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <span class="me-2">✅</span>
+                <div>Nuevo catálogo de ciencia y tecnología disponible este mes.</div>
+            </div>
+            <div class="alert alert-warning d-flex align-items-center mb-0" role="alert">
+                <span class="me-2">⏰</span>
+                <div>Recuerda renovar tus préstamos antes de la fecha límite.</div>
+            </div>
+        </div>
+    </div>
+</section>
