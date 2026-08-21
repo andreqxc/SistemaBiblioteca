@@ -1,0 +1,45 @@
+@using Biblioteca.Models
+@{
+    ViewData["Title"] = "Acerca de";
+
+    var servicios = new List<CardItem>
+    {
+        new CardItem { Icono = "🏠", Titulo = "Préstamo a domicilio", Descripcion = "Lleva tus libros favoritos a casa por hasta 15 días." },
+        new CardItem { Icono = "💻", Titulo = "Recursos digitales", Descripcion = "Acceso a libros electrónicos y bases de datos académicas." },
+        new CardItem { Icono = "🎓", Titulo = "Asesoría bibliotecaria", Descripcion = "Apoyo personalizado para tus proyectos de investigación." },
+        new CardItem { Icono = "🔔", Titulo = "Reservas y renovaciones", Descripcion = "Reserva y renueva tus préstamos desde el sistema en línea." },
+    };
+}
+
+<section class="about-hero">
+    <h1 class="hero-title">Acerca de la Biblioteca Virtual</h1>
+    <p class="hero-sub">
+        Somos un espacio digital pensado para acercar el conocimiento a toda la comunidad,
+        combinando un catálogo actualizado con servicios en línea sencillos de usar.
+    </p>
+</section>
+
+<section class="about-mission">
+    <div class="mission-item">
+        <h3>Misión</h3>
+        <p>Facilitar el acceso a libros, autores y recursos educativos mediante una plataforma moderna y adaptable.</p>
+    </div>
+    <div class="mission-item">
+        <h3>Visión</h3>
+        <p>Ser la biblioteca virtual de referencia para estudiantes y lectores de la comunidad.</p>
+    </div>
+    <div class="mission-item">
+        <h3>Valores</h3>
+        <p>Accesibilidad, organización y cercanía con nuestros usuarios.</p>
+    </div>
+</section>
+
+<section class="services-grid">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="grid-container">
+        @foreach (var item in servicios)
+        {
+            <partial name="_Card" model="item" />
+        }
+    </div>
+</section>

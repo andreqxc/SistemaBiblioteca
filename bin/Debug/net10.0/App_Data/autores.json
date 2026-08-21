@@ -1,0 +1,11 @@
+[
+  { "Id": 1, "Nombre": "Gabriel", "Apellido": "García Márquez", "Nacionalidad": "Colombiana", "FechaNacimiento": "1927-03-06T00:00:00", "Activo": true },
+  { "Id": 2, "Nombre": "Isabel", "Apellido": "Allende", "Nacionalidad": "Chilena", "FechaNacimiento": "1942-08-02T00:00:00", "Activo": true },
+  { "Id": 3, "Nombre": "Mario", "Apellido": "Vargas Llosa", "Nacionalidad": "Peruana", "FechaNacimiento": "1936-03-28T00:00:00", "Activo": false },
+  { "Id": 4, "Nombre": "Jorge Luis", "Apellido": "Borges", "Nacionalidad": "Argentina", "FechaNacimiento": "1899-08-24T00:00:00", "Activo": false },
+  { "Id": 5, "Nombre": "Claudia", "Apellido": "Lars", "Nacionalidad": "Salvadoreña", "FechaNacimiento": "1899-12-20T00:00:00", "Activo": true },
+  { "Id": 6, "Nombre": "Lauren", "Apellido": "Roberts", "Nacionalidad": "N/D", "FechaNacimiento": "1990-01-01T00:00:00", "Activo": true },
+  { "Id": 7, "Nombre": "Eva", "Apellido": "Muñoz", "Nacionalidad": "N/D", "FechaNacimiento": "1990-01-01T00:00:00", "Activo": true },
+  { "Id": 8, "Nombre": "Inma", "Apellido": "Rubiales", "Nacionalidad": "N/D", "FechaNacimiento": "1990-01-01T00:00:00", "Activo": true },
+  { "Id": 9, "Nombre": "SenLinYu", "Apellido": "", "Nacionalidad": "N/D", "FechaNacimiento": "1990-01-01T00:00:00", "Activo": true }
+]

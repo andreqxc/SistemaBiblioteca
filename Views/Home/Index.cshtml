@@ -1,0 +1,77 @@
+@using Biblioteca.Models
+@{
+    ViewData["Title"] = "Inicio";
+
+    var accesos = new List<CardItem>
+    {
+        new CardItem { Icono = "📖", Titulo = "Libros", Descripcion = "Explora el catálogo completo de la biblioteca." },
+        new CardItem { Icono = "✍️", Titulo = "Autores", Descripcion = "Conoce a los autores disponibles en el sistema." },
+        new CardItem { Icono = "🗂️", Titulo = "Categorías", Descripcion = "Navega por género y temática." },
+        new CardItem { Icono = "🔄", Titulo = "Préstamos", Descripcion = "Consulta el estado de tus préstamos." },
+    };
+
+    var destacados = new List<CardItem>
+    {
+        new CardItem { Icono = "⭐", Titulo = "Libros destacados", Descripcion = "Los títulos más solicitados de la semana en la Biblioteca Virtual." },
+        new CardItem { Icono = "🏷️", Titulo = "Categorías", Descripcion = "Ciencia ficción, historia, tecnología, novela y más." },
+        new CardItem { Icono = "👤", Titulo = "Autores", Descripcion = "Perfiles y biografías de los autores del catálogo." },
+        new CardItem { Icono = "🛎️", Titulo = "Servicios bibliotecarios", Descripcion = "Préstamo, renovación y asesoría en línea." },
+    };
+}
+
+<!-- Actividad 1: Hero con Flexbox -->
+<section class="hero-flex">
+    <div class="hero-text">
+        <span class="hero-eyebrow">Catálogo abierto · ASP.NET Core MVC</span>
+        <h1 class="hero-title">Tu <em>biblioteca</em><br />virtual</h1>
+        <p class="hero-sub">Explora libros, autores y categorías, y gestiona tus préstamos desde un mismo lugar.</p>
+        <div class="hero-actions">
+            <a asp-controller="Libros" asp-action="Index" class="btn btn-primary">Ver catálogo</a>
+            <a asp-controller="Autores" asp-action="Index" class="btn btn-outline-secondary">Ver autores</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="hero-card-frame">
+            <img src="~/images/376af393-0169-41c4-8856-eea8986f8a1f.jpg" alt="Libro destacado" />
+        </div>
+    </div>
+</section>
+
+<!-- Accesos rápidos con Flexbox -->
+<section class="quick-access">
+    @foreach (var item in accesos)
+    {
+        <partial name="_Card" model="item" />
+    }
+</section>
+
+<!-- Actividad 2: Sección Biblioteca Virtual con CSS Grid -->
+<section class="virtual-lib-grid">
+    <h2 class="section-title">Nuestra Biblioteca Virtual</h2>
+    <div class="grid-container">
+        @foreach (var item in destacados)
+        {
+            <partial name="_Card" model="item" />
+        }
+    </div>
+</section>
+
+<!-- Sección de cifras: Flexbox -->
+<section class="stats-strip">
+    <div class="stat-item">
+        <span class="stat-number">5,000+</span>
+        <span class="stat-label">Libros</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Autores</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">10,000+</span>
+        <span class="stat-label">Usuarios</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Disponible</span>
+    </div>
+</section>

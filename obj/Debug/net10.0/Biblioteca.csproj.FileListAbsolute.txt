@@ -1,0 +1,198 @@
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/appsettings.Development.json
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/appsettings.json
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca.staticwebassets.runtime.json
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca.staticwebassets.endpoints.json
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca.deps.json
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca.runtimeconfig.json
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2/bin/Debug/net10.0/Biblioteca.pdb
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.AssemblyInfoInputs.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.AssemblyInfo.cs
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.csproj.CoreCompileInputs.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.MvcApplicationPartsAssemblyInfo.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.RazorAssemblyInfo.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.RazorAssemblyInfo.cs
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.sourcelink.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/rjimswa.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/scopedcss/bundle/Biblioteca.styles.css
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/scopedcss/projectbundle/Biblioteca.bundle.scp.css
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/conv0cg0pa-{0}-4ee6lqd6br-4ee6lqd6br.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/acm82m7780-{0}-61n19gt1b8-61n19gt1b8.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/tomr9z7ae4-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/i0jvgox69n-{0}-bqjiyaj88i-bqjiyaj88i.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/u1xo0kew01-{0}-c2jlpeoesf-c2jlpeoesf.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/4oekubfjlc-{0}-erw9l3u2r3-erw9l3u2r3.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/2fl9mv88p5-{0}-aexeepp0ev-aexeepp0ev.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/j2ia2tf7n1-{0}-d7shbmvgxk-d7shbmvgxk.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/aq6e622hmf-{0}-ausgxo2sd3-ausgxo2sd3.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/1p8i2gjq9e-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/fp6ryx0e97-{0}-cosvhxvwiu-cosvhxvwiu.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/3op4qz35zl-{0}-ub07r2b239-ub07r2b239.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/kfd74t7g02-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/kkj4wevufu-{0}-b7pk76d08c-b7pk76d08c.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/axozlvq8gj-{0}-fsbi9cje9m-fsbi9cje9m.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/sxhr93tl10-{0}-rzd6atqjts-rzd6atqjts.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/hb7ooad4zh-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/a6ivwe5qsi-{0}-dxx9fxp4il-dxx9fxp4il.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/knjydr79r8-{0}-jd9uben2k1-jd9uben2k1.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/i64ktlfdbc-{0}-khv3u5hwcm-khv3u5hwcm.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/j6m6ryeffk-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/pq2m4kjods-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/og9tu8ekyz-{0}-c2oey78nd0-c2oey78nd0.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/2hd29eqkqi-{0}-tdbxkamptv-tdbxkamptv.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/gaygdfglqt-{0}-j5mq2jizvt-j5mq2jizvt.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/hlajxwjvet-{0}-06098lyss8-06098lyss8.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/44kafi3k9u-{0}-nvvlpmu67g-nvvlpmu67g.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/3crp4s0qfs-{0}-s35ty4nyc5-s35ty4nyc5.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/d8k9ra2za9-{0}-pj5nd1wqec-pj5nd1wqec.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/vgut1jjqy2-{0}-46ein0sx1k-46ein0sx1k.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/spht5p1e7z-{0}-v0zj4ognzu-v0zj4ognzu.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/01mqdhc7md-{0}-37tfw0ft22-37tfw0ft22.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/u8fd7lkqv4-{0}-hrwsygsryq-hrwsygsryq.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/mq46eays9g-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/76zlo21g16-{0}-ft3s53vfgj-ft3s53vfgj.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/jp0ovp5fic-{0}-6cfz1n2cew-6cfz1n2cew.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/ahobr6tui1-{0}-6pdc2jztkx-6pdc2jztkx.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/wca5fb0ucm-{0}-493y06b0oq-493y06b0oq.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/4xavra9070-{0}-iovd86k7lj-iovd86k7lj.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/qlmqmitbi9-{0}-vr1egmr9el-vr1egmr9el.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/5d9131us3n-{0}-kbrnm935zg-kbrnm935zg.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/3wnc0n4as3-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/1cnl2lwbei-{0}-y7v9cxd14o-y7v9cxd14o.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/hq4z33jt5w-{0}-notf2xhcfb-notf2xhcfb.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/beegroqgkb-{0}-h1s4sie4z3-h1s4sie4z3.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/l1rc91oop6-{0}-63fj8s7r0e-63fj8s7r0e.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/5pci06hgg8-{0}-0j3bgjxly4-0j3bgjxly4.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/4ziuczaveh-{0}-47otxtyo56-47otxtyo56.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/4c0v0nzrlq-{0}-4v8eqarkd7-4v8eqarkd7.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/x7dwfm6tg1-{0}-356vix0kms-356vix0kms.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/cst37mmocb-{0}-83jwlth58m-83jwlth58m.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/ykcq7eneh5-{0}-mrlpezrjn3-mrlpezrjn3.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/apupk0we7f-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/trobneet6n-{0}-ag7o75518u-ag7o75518u.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/pn6fh18u93-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/sg1ue3sjza-{0}-0i3buxo5is-0i3buxo5is.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/m33dx0s4pr-{0}-o1o13a6vjx-o1o13a6vjx.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/jeo8a5o20k-{0}-ttgo8qnofa-ttgo8qnofa.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/xgyq2yjrlj-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/qr5om95lz0-{0}-muycvpuwrr-muycvpuwrr.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/8t4tuzamd1-{0}-87fc7y1x7t-87fc7y1x7t.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/c8k2y0mtej-{0}-mlv21k5csn-mlv21k5csn.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/bezqvw0h9g-{0}-9lehzdzzgy-9lehzdzzgy.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/compressed/1u46dw0h3o-{0}-9lehzdzzgy-9lehzdzzgy.gz
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/staticwebassets.build.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/staticwebassets.build.json.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/staticwebassets.development.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/staticwebassets.build.endpoints.json
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/swae.build.ex.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/refint/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.pdb
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/Biblioteca.genruntimeconfig.cache
+/Users/andre/Downloads/Biblioteca-2/obj/Debug/net10.0/ref/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/appsettings.Development.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/appsettings.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/App_Data/autores.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/App_Data/libros.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca.staticwebassets.runtime.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca.staticwebassets.endpoints.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca.deps.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca.runtimeconfig.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2 copy-5/bin/Debug/net10.0/Biblioteca.pdb
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.AssemblyInfoInputs.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.AssemblyInfo.cs
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.csproj.CoreCompileInputs.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.MvcApplicationPartsAssemblyInfo.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.RazorAssemblyInfo.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.RazorAssemblyInfo.cs
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/rjimswa.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/scopedcss/bundle/Biblioteca.styles.css
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/scopedcss/projectbundle/Biblioteca.bundle.scp.css
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/conv0cg0pa-{0}-rd45kaem00-rd45kaem00.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/acm82m7780-{0}-61n19gt1b8-61n19gt1b8.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/6787v439o0-{0}-nb3t2vh3b7-nb3t2vh3b7.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/tomr9z7ae4-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/i0jvgox69n-{0}-bqjiyaj88i-bqjiyaj88i.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/u1xo0kew01-{0}-c2jlpeoesf-c2jlpeoesf.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/4oekubfjlc-{0}-erw9l3u2r3-erw9l3u2r3.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/2fl9mv88p5-{0}-aexeepp0ev-aexeepp0ev.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/j2ia2tf7n1-{0}-d7shbmvgxk-d7shbmvgxk.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/aq6e622hmf-{0}-ausgxo2sd3-ausgxo2sd3.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/1p8i2gjq9e-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/fp6ryx0e97-{0}-cosvhxvwiu-cosvhxvwiu.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/3op4qz35zl-{0}-ub07r2b239-ub07r2b239.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/kfd74t7g02-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/kkj4wevufu-{0}-b7pk76d08c-b7pk76d08c.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/axozlvq8gj-{0}-fsbi9cje9m-fsbi9cje9m.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/sxhr93tl10-{0}-rzd6atqjts-rzd6atqjts.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/hb7ooad4zh-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/a6ivwe5qsi-{0}-dxx9fxp4il-dxx9fxp4il.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/knjydr79r8-{0}-jd9uben2k1-jd9uben2k1.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/i64ktlfdbc-{0}-khv3u5hwcm-khv3u5hwcm.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/j6m6ryeffk-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/pq2m4kjods-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/og9tu8ekyz-{0}-c2oey78nd0-c2oey78nd0.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/2hd29eqkqi-{0}-tdbxkamptv-tdbxkamptv.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/gaygdfglqt-{0}-j5mq2jizvt-j5mq2jizvt.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/hlajxwjvet-{0}-06098lyss8-06098lyss8.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/44kafi3k9u-{0}-nvvlpmu67g-nvvlpmu67g.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/3crp4s0qfs-{0}-s35ty4nyc5-s35ty4nyc5.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/d8k9ra2za9-{0}-pj5nd1wqec-pj5nd1wqec.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/vgut1jjqy2-{0}-46ein0sx1k-46ein0sx1k.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/spht5p1e7z-{0}-v0zj4ognzu-v0zj4ognzu.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/01mqdhc7md-{0}-37tfw0ft22-37tfw0ft22.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/u8fd7lkqv4-{0}-hrwsygsryq-hrwsygsryq.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/mq46eays9g-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/76zlo21g16-{0}-ft3s53vfgj-ft3s53vfgj.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/jp0ovp5fic-{0}-6cfz1n2cew-6cfz1n2cew.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/ahobr6tui1-{0}-6pdc2jztkx-6pdc2jztkx.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/wca5fb0ucm-{0}-493y06b0oq-493y06b0oq.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/4xavra9070-{0}-iovd86k7lj-iovd86k7lj.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/qlmqmitbi9-{0}-vr1egmr9el-vr1egmr9el.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/5d9131us3n-{0}-kbrnm935zg-kbrnm935zg.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/3wnc0n4as3-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/1cnl2lwbei-{0}-y7v9cxd14o-y7v9cxd14o.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/hq4z33jt5w-{0}-notf2xhcfb-notf2xhcfb.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/beegroqgkb-{0}-h1s4sie4z3-h1s4sie4z3.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/l1rc91oop6-{0}-63fj8s7r0e-63fj8s7r0e.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/5pci06hgg8-{0}-0j3bgjxly4-0j3bgjxly4.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/4ziuczaveh-{0}-47otxtyo56-47otxtyo56.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/4c0v0nzrlq-{0}-4v8eqarkd7-4v8eqarkd7.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/x7dwfm6tg1-{0}-356vix0kms-356vix0kms.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/cst37mmocb-{0}-83jwlth58m-83jwlth58m.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/ykcq7eneh5-{0}-mrlpezrjn3-mrlpezrjn3.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/apupk0we7f-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/trobneet6n-{0}-ag7o75518u-ag7o75518u.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/pn6fh18u93-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/sg1ue3sjza-{0}-0i3buxo5is-0i3buxo5is.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/m33dx0s4pr-{0}-o1o13a6vjx-o1o13a6vjx.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/jeo8a5o20k-{0}-ttgo8qnofa-ttgo8qnofa.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/xgyq2yjrlj-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/qr5om95lz0-{0}-muycvpuwrr-muycvpuwrr.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/8t4tuzamd1-{0}-87fc7y1x7t-87fc7y1x7t.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/c8k2y0mtej-{0}-mlv21k5csn-mlv21k5csn.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/bezqvw0h9g-{0}-9lehzdzzgy-9lehzdzzgy.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/compressed/1u46dw0h3o-{0}-9lehzdzzgy-9lehzdzzgy.gz
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/staticwebassets.build.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/staticwebassets.build.json.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/staticwebassets.development.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/staticwebassets.build.endpoints.json
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/swae.build.ex.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/refint/Biblioteca.dll
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.pdb
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/Biblioteca.genruntimeconfig.cache
+/Users/andre/Downloads/Biblioteca-2 copy-5/obj/Debug/net10.0/ref/Biblioteca.dll

@@ -1,0 +1,6 @@
+[
+  { "Id": 1, "Titulo": "Powerless", "Genero": "Fantasía", "Anio": 2023, "Disponible": true, "AutorId": 6, "ImagenUrl": null },
+  { "Id": 2, "Titulo": "Boss", "Genero": "Dark romance", "Anio": 2025, "Disponible": true, "AutorId": 7, "ImagenUrl": null },
+  { "Id": 3, "Titulo": "El arte de ser nosotros", "Genero": "Romance", "Anio": 2023, "Disponible": false, "AutorId": 8, "ImagenUrl": null },
+  { "Id": 4, "Titulo": "Alchemised", "Genero": "Fantasía Oscura", "Anio": 2025, "Disponible": true, "AutorId": 9, "ImagenUrl": null }
+]

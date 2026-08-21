@@ -1,0 +1,33 @@
+@model Biblioteca.Models.Autor
+
+@{
+    ViewData["Title"] = "Editar Autor";
+}
+
+<h2>Editar Autor</h2>
+
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Apellido</label>
+        <input asp-for="Apellido" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nacionalidad</label>
+        <input asp-for="Nacionalidad" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fecha de Nacimiento</label>
+        <input asp-for="FechaNacimiento" type="date" class="form-control" value="@Model.FechaNacimiento.ToString("yyyy-MM-dd")" />
+    </div>
+    <div class="mb-3 form-check">
+        <input asp-for="Activo" class="form-check-input" />
+        <label class="form-check-label">Activo</label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

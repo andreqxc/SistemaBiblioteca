@@ -1,0 +1,50 @@
+@model List<Biblioteca.Models.Libro>
+
+@{
+    ViewData["Title"] = "Libros";
+    var autores = Biblioteca.Controllers.AutoresController.Autores;
+}
+
+<section class="catalog-header">
+    <div>
+        <span class="hero-eyebrow">Catálogo</span>
+        <h2 class="section-title-lg">Lista de Libros</h2>
+    </div>
+    <a asp-action="Create" class="btn btn-primary">+ Agregar libro</a>
+</section>
+
+<div class="book-catalog-grid">
+    @foreach (var libro in Model)
+    {
+        var autor = autores.FirstOrDefault(a => a.Id == libro.AutorId);
+        <div class="book-catalog-card">
+            <div class="book-catalog-cover">
+                <img src="@(string.IsNullOrEmpty(libro.ImagenUrl) ? "/images/sin-imagen.svg" : libro.ImagenUrl)"
+                     alt="@libro.Titulo" />
+            </div>
+            <div class="book-catalog-body">
+                <h5 class="book-catalog-title">@libro.Titulo</h5>
+                <p class="book-catalog-meta">
+                    @libro.Genero (@libro.Anio)<br />
+                    Autor: @(autor != null ? autor.Nombre + " " + autor.Apellido : "N/A")
+                </p>
+                @if (libro.Disponible)
+                {
+                    <span class="tag tag-forest">Disponible</span>
+                }
+                else
+                {
+                    <span class="tag tag-brass">No disponible</span>
+                }
+            </div>
+            <div class="book-catalog-actions">
+                <a asp-action="Details" asp-route-id="@libro.Id" class="btn btn-sm btn-outline-secondary">Ver</a>
+                <a asp-action="Edit" asp-route-id="@libro.Id" class="btn btn-sm btn-outline-secondary">Editar</a>
+                <form asp-action="Delete" asp-route-id="@libro.Id" method="post"
+                      onsubmit="return confirm('¿Eliminar @libro.Titulo?');">
+                    <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>

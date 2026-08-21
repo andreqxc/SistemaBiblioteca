@@ -1,0 +1,25 @@
+@model Biblioteca.Models.Libro
+
+@{
+    ViewData["Title"] = "Detalle del Libro";
+    var autor = Biblioteca.Controllers.AutoresController.Autores.FirstOrDefault(a => a.Id == Model.AutorId);
+}
+
+<h2>@Model.Titulo</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@(string.IsNullOrEmpty(Model.ImagenUrl) ? "/images/sin-imagen.png" : Model.ImagenUrl)"
+             class="img-fluid rounded" alt="@Model.Titulo" />
+    </div>
+    <div class="col-md-8">
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Género:</strong> @Model.Genero</li>
+            <li class="list-group-item"><strong>Año:</strong> @Model.Anio</li>
+            <li class="list-group-item"><strong>Autor:</strong> @(autor != null ? autor.Nombre + " " + autor.Apellido : "N/A")</li>
+            <li class="list-group-item"><strong>Disponible:</strong> @(Model.Disponible ? "Sí" : "No")</li>
+        </ul>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>
