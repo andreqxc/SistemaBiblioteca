@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Detalle del Libro";
-    var autor = Biblioteca.Controllers.AutoresController.Autores.FirstOrDefault(a => a.Id == Model.AutorId);
+    var autor = (Biblioteca.Models.Autor?)ViewBag.Autor;
 }
 
 <h2>@Model.Titulo</h2>

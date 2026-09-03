@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Libros";
-    var autores = Biblioteca.Controllers.AutoresController.Autores;
+    var autores = (List<Biblioteca.Models.Autor>)ViewBag.Autores;
 }
 
 <section class="catalog-header">

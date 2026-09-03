@@ -1,5 +1,6 @@
 using Biblioteca.Data;
 using Biblioteca.Models;
+using Biblioteca.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Biblioteca.Controllers
@@ -16,14 +17,17 @@ namespace Biblioteca.Controllers
         });
 
         private readonly IWebHostEnvironment _env;
+        private readonly IAutorService _autorService;
 
-        public LibrosController(IWebHostEnvironment env)
+        public LibrosController(IWebHostEnvironment env, IAutorService autorService)
         {
             _env = env;
+            _autorService = autorService;
         }
 
         public IActionResult Index()
         {
+            ViewBag.Autores = _autorService.ObtenerTodos();
             return View(_libros);
         }
 
@@ -31,12 +35,13 @@ namespace Biblioteca.Controllers
         {
             var libro = _libros.FirstOrDefault(l => l.Id == id);
             if (libro == null) return NotFound();
+            ViewBag.Autor = _autorService.ObtenerPorId(libro.AutorId);
             return View(libro);
         }
 
         public IActionResult Create()
         {
-            ViewBag.Autores = AutoresController.Autores;
+            ViewBag.Autores = _autorService.ObtenerTodos();
             return View();
         }
 
@@ -59,7 +64,7 @@ namespace Biblioteca.Controllers
         {
             var libro = _libros.FirstOrDefault(l => l.Id == id);
             if (libro == null) return NotFound();
-            ViewBag.Autores = AutoresController.Autores;
+            ViewBag.Autores = _autorService.ObtenerTodos();
             return View(libro);
         }
 

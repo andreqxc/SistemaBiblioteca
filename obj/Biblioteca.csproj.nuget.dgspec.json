@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andre/Downloads/Biblioteca-2 copy-5/Biblioteca.csproj": {}
+    "/Users/andre/Downloads/Biblioteca-2 copy-5-2/Biblioteca.csproj": {}
   },
   "projects": {
-    "/Users/andre/Downloads/Biblioteca-2 copy-5/Biblioteca.csproj": {
+    "/Users/andre/Downloads/Biblioteca-2 copy-5-2/Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andre/Downloads/Biblioteca-2 copy-5/Biblioteca.csproj",
+        "projectUniqueName": "/Users/andre/Downloads/Biblioteca-2 copy-5-2/Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "/Users/andre/Downloads/Biblioteca-2 copy-5/Biblioteca.csproj",
+        "projectPath": "/Users/andre/Downloads/Biblioteca-2 copy-5-2/Biblioteca.csproj",
         "packagesPath": "/Users/andre/.nuget/packages/",
-        "outputPath": "/Users/andre/Downloads/Biblioteca-2 copy-5/obj/",
+        "outputPath": "/Users/andre/Downloads/Biblioteca-2 copy-5-2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/andre/.nuget/NuGet/NuGet.Config"
