@@ -1,3 +1,4 @@
+using Biblioteca.Data;
 using Biblioteca.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAutorService, AutorService>();
 // Para probar la Actividad 5 (Reto), comenta la línea de arriba y descomenta esta:
 // builder.Services.AddScoped<IAutorService, AutorServiceMock>();
+
+builder.Services.AddScoped<CategoriaRepositorio>();
 
 var app = builder.Build();
 
