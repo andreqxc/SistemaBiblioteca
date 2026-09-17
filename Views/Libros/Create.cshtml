@@ -5,39 +5,59 @@
     var autores = (List<Biblioteca.Models.Autor>)ViewBag.Autores;
 }
 
-<h2>Agregar Libro</h2>
+<section class="catalog-header">
+    <div>
+        <span class="hero-eyebrow">Catálogo</span>
+        <h2 class="section-title-lg">Agregar Libro</h2>
+    </div>
+</section>
 
-<form asp-action="Create" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label class="form-label">Título</label>
-        <input name="Titulo" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Género</label>
-        <input name="Genero" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Año</label>
-        <input name="Anio" type="number" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Autor</label>
-        <select name="AutorId" class="form-select">
-            @foreach (var autor in autores)
-            {
-                <option value="@autor.Id">@autor.Nombre @autor.Apellido</option>
-            }
-        </select>
-    </div>
-    <div class="mb-3 form-check">
-        <input name="Disponible" type="checkbox" class="form-check-input" value="true" checked />
-        <label class="form-check-label">Disponible</label>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Imagen</label>
-        <input name="Imagen" type="file" class="form-control" accept="image/*" />
-    </div>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post" enctype="multipart/form-data" novalidate>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-    <button type="submit" class="btn btn-success">Guardar</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+            <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input asp-for="Titulo" class="form-control" placeholder="Ej: Cien Años de Soledad" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Género</label>
+                <input asp-for="Genero" class="form-control" placeholder="Ej: Realismo Mágico" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Año</label>
+                <input asp-for="Anio" type="number" class="form-control" placeholder="Ej: 1967" />
+                <span asp-validation-for="Anio" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Autor</label>
+                <select asp-for="AutorId" class="form-select">
+                    <option value="">-- Seleccioná un autor --</option>
+                    @foreach (var autor in autores)
+                    {
+                        <option value="@autor.Id">@autor.Nombre @autor.Apellido</option>
+                    }
+                </select>
+                <span asp-validation-for="AutorId" class="text-danger"></span>
+            </div>
+            <div class="mb-3 form-check">
+                <input name="Disponible" type="checkbox" class="form-check-input" value="true" checked />
+                <label class="form-check-label">Disponible</label>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Imagen</label>
+                <input name="Imagen" type="file" class="form-control" accept="image/*" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

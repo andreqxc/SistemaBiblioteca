@@ -1,5 +1,6 @@
 using Biblioteca.Data;
 using Biblioteca.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddScoped<IAutorService, AutorService>();
 // builder.Services.AddScoped<IAutorService, AutorServiceMock>();
 
 builder.Services.AddScoped<CategoriaRepositorio>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaDB")));
 
 var app = builder.Build();
 

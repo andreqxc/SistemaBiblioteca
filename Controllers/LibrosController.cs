@@ -2,38 +2,33 @@ using Biblioteca.Data;
 using Biblioteca.Models;
 using Biblioteca.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca.Controllers
 {
     public class LibrosController : Controller
     {
-        private const string Archivo = "libros.json";
-
-        private static List<Libro> _libros = JsonStore.Cargar(Archivo, new List<Libro>
-        {
-            new Libro { Id = 1, Titulo = "Cien Años de Soledad", Genero = "Realismo Mágico", Anio = 1967, Disponible = true, AutorId = 1 },
-            new Libro { Id = 2, Titulo = "La Casa de los Espíritus", Genero = "Realismo Mágico", Anio = 1982, Disponible = true, AutorId = 2 },
-            new Libro { Id = 3, Titulo = "La Ciudad y los Perros", Genero = "Novela", Anio = 1963, Disponible = false, AutorId = 3 }
-        });
-
+        private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _env;
         private readonly IAutorService _autorService;
 
-        public LibrosController(IWebHostEnvironment env, IAutorService autorService)
+        public LibrosController(ApplicationDbContext context, IWebHostEnvironment env, IAutorService autorService)
         {
+            _context = context;
             _env = env;
             _autorService = autorService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             ViewBag.Autores = _autorService.ObtenerTodos();
-            return View(_libros);
+            var libros = await _context.Libros.ToListAsync();
+            return View(libros);
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var libro = _libros.FirstOrDefault(l => l.Id == id);
+            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
             if (libro == null) return NotFound();
             ViewBag.Autor = _autorService.ObtenerPorId(libro.AutorId);
             return View(libro);
@@ -48,21 +43,26 @@ namespace Biblioteca.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Libro model, IFormFile? Imagen)
         {
-            model.Id = _libros.Any() ? _libros.Max(l => l.Id) + 1 : 1;
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Autores = _autorService.ObtenerTodos();
+                return View(model);
+            }
 
             if (Imagen != null && Imagen.Length > 0)
             {
                 model.ImagenUrl = await GuardarImagen(Imagen);
             }
 
-            _libros.Add(model);
-            JsonStore.Guardar(Archivo, _libros);
+            _context.Libros.Add(model);
+            await _context.SaveChangesAsync();
+            TempData["Mensaje"] = $"\"{model.Titulo}\" se agregó correctamente.";
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var libro = _libros.FirstOrDefault(l => l.Id == id);
+            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
             if (libro == null) return NotFound();
             ViewBag.Autores = _autorService.ObtenerTodos();
             return View(libro);
@@ -71,7 +71,14 @@ namespace Biblioteca.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, Libro model, IFormFile? Imagen)
         {
-            var libro = _libros.FirstOrDefault(l => l.Id == id);
+            if (!ModelState.IsValid)
+            {
+                model.Id = id;
+                ViewBag.Autores = _autorService.ObtenerTodos();
+                return View(model);
+            }
+
+            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
             if (libro == null) return NotFound();
 
             libro.Titulo = model.Titulo;
@@ -85,17 +92,19 @@ namespace Biblioteca.Controllers
                 libro.ImagenUrl = await GuardarImagen(Imagen);
             }
 
-            JsonStore.Guardar(Archivo, _libros);
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var libro = _libros.FirstOrDefault(l => l.Id == id);
-            if (libro != null) _libros.Remove(libro);
-
-            JsonStore.Guardar(Archivo, _libros);
+            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
+            if (libro != null)
+            {
+                _context.Libros.Remove(libro);
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction("Index");
         }
 

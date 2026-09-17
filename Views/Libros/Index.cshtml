@@ -13,6 +13,18 @@
     <a asp-action="Create" class="btn btn-primary">+ Agregar libro</a>
 </section>
 
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-secondary">
+        Todavía no hay libros registrados. Hacé clic en <strong>+ Agregar libro</strong> para cargar el primero.
+    </div>
+}
+
 <div class="book-catalog-grid">
     @foreach (var libro in Model)
     {
