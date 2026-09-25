@@ -10,13 +10,14 @@
         <span class="hero-eyebrow">Catálogo</span>
         <h2 class="section-title-lg">Agregar Libro</h2>
     </div>
+    <a asp-action="Index" class="btn btn-outline-secondary">← Volver al listado</a>
 </section>
 
-<div class="row">
-    <div class="col-md-6">
-        <form asp-action="Create" method="post" enctype="multipart/form-data" novalidate>
-            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+<div class="book-form-card">
+    <form asp-action="Create" method="post" enctype="multipart/form-data" novalidate>
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
+        <div class="form-row-split">
             <div class="mb-3">
                 <label class="form-label">Título</label>
                 <input asp-for="Titulo" class="form-control" placeholder="Ej: Cien Años de Soledad" />
@@ -27,6 +28,9 @@
                 <input asp-for="Genero" class="form-control" placeholder="Ej: Realismo Mágico" />
                 <span asp-validation-for="Genero" class="text-danger"></span>
             </div>
+        </div>
+
+        <div class="form-row-split">
             <div class="mb-3">
                 <label class="form-label">Año</label>
                 <input asp-for="Anio" type="number" class="form-control" placeholder="Ej: 1967" />
@@ -43,19 +47,23 @@
                 </select>
                 <span asp-validation-for="AutorId" class="text-danger"></span>
             </div>
-            <div class="mb-3 form-check">
-                <input name="Disponible" type="checkbox" class="form-check-input" value="true" checked />
-                <label class="form-check-label">Disponible</label>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Imagen</label>
-                <input name="Imagen" type="file" class="form-control" accept="image/*" />
-            </div>
+        </div>
 
-            <button type="submit" class="btn btn-primary">Guardar</button>
-            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-        </form>
-    </div>
+        <div class="form-switch-row">
+            <input name="Disponible" type="checkbox" class="form-check-input" value="true" checked />
+            <label>Disponible para préstamo</label>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Imagen de portada</label>
+            <input name="Imagen" type="file" class="form-control" accept="image/*" />
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Guardar libro</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        </div>
+    </form>
 </div>
 
 @section Scripts {

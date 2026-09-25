@@ -5,21 +5,42 @@
     var autor = (Biblioteca.Models.Autor?)ViewBag.Autor;
 }
 
-<h2>@Model.Titulo</h2>
-
-<div class="row">
-    <div class="col-md-4">
-        <img src="@(string.IsNullOrEmpty(Model.ImagenUrl) ? "/images/sin-imagen.png" : Model.ImagenUrl)"
-             class="img-fluid rounded" alt="@Model.Titulo" />
+<section class="catalog-header">
+    <div>
+        <span class="hero-eyebrow">Catálogo</span>
+        <h2 class="section-title-lg">Detalle del Libro</h2>
     </div>
-    <div class="col-md-8">
-        <ul class="list-group">
-            <li class="list-group-item"><strong>Género:</strong> @Model.Genero</li>
-            <li class="list-group-item"><strong>Año:</strong> @Model.Anio</li>
-            <li class="list-group-item"><strong>Autor:</strong> @(autor != null ? autor.Nombre + " " + autor.Apellido : "N/A")</li>
-            <li class="list-group-item"><strong>Disponible:</strong> @(Model.Disponible ? "Sí" : "No")</li>
+    <a asp-action="Index" class="btn btn-outline-secondary">← Volver al listado</a>
+</section>
+
+<div class="book-detail">
+    <div class="book-detail-cover">
+        <img src="@(string.IsNullOrEmpty(Model.ImagenUrl) ? "/images/sin-imagen.svg" : Model.ImagenUrl)"
+             alt="@Model.Titulo" />
+    </div>
+    <div class="book-detail-info">
+        <h3 class="book-detail-title">@Model.Titulo</h3>
+        @if (Model.Disponible)
+        {
+            <span class="tag tag-forest">Disponible</span>
+        }
+        else
+        {
+            <span class="tag tag-brass">No disponible</span>
+        }
+
+        <ul class="book-detail-meta-list">
+            <li><span>Género</span> <strong>@Model.Genero</strong></li>
+            <li><span>Año</span> <strong>@Model.Anio</strong></li>
+            <li><span>Autor</span> <strong>@(autor != null ? autor.Nombre + " " + autor.Apellido : "N/A")</strong></li>
         </ul>
+
+        <div class="book-detail-actions">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Editar</a>
+            <form asp-action="Delete" asp-route-id="@Model.Id" method="post"
+                  onsubmit="return confirm('¿Eliminar \'@Model.Titulo\'? Esta acción no se puede deshacer.');">
+                <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+            </form>
+        </div>
     </div>
 </div>
-
-<a asp-action="Index" class="btn btn-secondary mt-3">Volver</a>

@@ -28,7 +28,7 @@ namespace Biblioteca.Controllers
 
         public async Task<IActionResult> Details(int id)
         {
-            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
+            var libro = await _context.Libros.FindAsync(id);
             if (libro == null) return NotFound();
             ViewBag.Autor = _autorService.ObtenerPorId(libro.AutorId);
             return View(libro);
@@ -62,7 +62,7 @@ namespace Biblioteca.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
-            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
+            var libro = await _context.Libros.FindAsync(id);
             if (libro == null) return NotFound();
             ViewBag.Autores = _autorService.ObtenerTodos();
             return View(libro);
@@ -78,7 +78,7 @@ namespace Biblioteca.Controllers
                 return View(model);
             }
 
-            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
+            var libro = await _context.Libros.FindAsync(id);
             if (libro == null) return NotFound();
 
             libro.Titulo = model.Titulo;
@@ -92,18 +92,21 @@ namespace Biblioteca.Controllers
                 libro.ImagenUrl = await GuardarImagen(Imagen);
             }
 
+            _context.Libros.Update(libro);
             await _context.SaveChangesAsync();
+            TempData["Mensaje"] = $"\"{libro.Titulo}\" se actualizó correctamente.";
             return RedirectToAction("Index");
         }
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var libro = await _context.Libros.FirstOrDefaultAsync(l => l.Id == id);
+            var libro = await _context.Libros.FindAsync(id);
             if (libro != null)
             {
                 _context.Libros.Remove(libro);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = $"\"{libro.Titulo}\" se eliminó correctamente.";
             }
             return RedirectToAction("Index");
         }

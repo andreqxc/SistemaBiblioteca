@@ -5,43 +5,77 @@
     var autores = (List<Biblioteca.Models.Autor>)ViewBag.Autores;
 }
 
-<h2>Editar Libro</h2>
+<section class="catalog-header">
+    <div>
+        <span class="hero-eyebrow">Catálogo</span>
+        <h2 class="section-title-lg">Editar Libro</h2>
+    </div>
+    <a asp-action="Index" class="btn btn-outline-secondary">← Volver al listado</a>
+</section>
 
-<form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label class="form-label">Título</label>
-        <input asp-for="Titulo" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Género</label>
-        <input asp-for="Genero" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Año</label>
-        <input asp-for="Anio" type="number" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Autor</label>
-        <select asp-for="AutorId" class="form-select">
-            @foreach (var autor in autores)
-            {
-                <option value="@autor.Id">@autor.Nombre @autor.Apellido</option>
-            }
-        </select>
-    </div>
-    <div class="mb-3 form-check">
-        <input asp-for="Disponible" class="form-check-input" />
-        <label class="form-check-label">Disponible</label>
-    </div>
-    <div class="mb-3">
-        @if (!string.IsNullOrEmpty(Model.ImagenUrl))
-        {
-            <img src="@Model.ImagenUrl" style="height:120px" class="d-block mb-2 rounded" />
-        }
-        <label class="form-label">Cambiar Imagen</label>
-        <input name="Imagen" type="file" class="form-control" accept="image/*" />
-    </div>
+<div class="book-form-card">
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data" novalidate>
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-    <button type="submit" class="btn btn-success">Guardar</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+        <div class="form-row-split">
+            <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Género</label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row-split">
+            <div class="mb-3">
+                <label class="form-label">Año</label>
+                <input asp-for="Anio" type="number" class="form-control" />
+                <span asp-validation-for="Anio" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Autor</label>
+                <select asp-for="AutorId" class="form-select">
+                    @foreach (var autor in autores)
+                    {
+                        <option value="@autor.Id">@autor.Nombre @autor.Apellido</option>
+                    }
+                </select>
+                <span asp-validation-for="AutorId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-switch-row">
+            <input asp-for="Disponible" class="form-check-input" />
+            <label>Disponible para préstamo</label>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Imagen de portada</label>
+            <div class="image-preview-box">
+                @if (!string.IsNullOrEmpty(Model.ImagenUrl))
+                {
+                    <img src="@Model.ImagenUrl" alt="@Model.Titulo" />
+                }
+                else
+                {
+                    <img src="/images/sin-imagen.svg" alt="Sin imagen" />
+                }
+                <input name="Imagen" type="file" class="form-control" accept="image/*" />
+            </div>
+            <small class="text-muted">Dejá este campo vacío si no querés cambiar la imagen actual.</small>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
