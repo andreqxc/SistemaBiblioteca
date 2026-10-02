@@ -1,0 +1,79 @@
+@model RegistroViewModel
+
+@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+<section class="auth-shell">
+    <aside class="auth-aside" aria-hidden="true">
+        <span class="auth-eyebrow">Biblioteca Virtual</span>
+        <h1 class="auth-aside-title">Unite a la <em>biblioteca</em>.</h1>
+        <p class="auth-aside-text">Creá tu cuenta en pocos pasos y empezá a explorar el catálogo de libros, autores y categorías.</p>
+        <ul class="auth-aside-list">
+            <li>Registro rápido y gratuito</li>
+            <li>Ingresá con tu usuario o tu correo</li>
+            <li>Tus datos protegidos con contraseña segura</li>
+        </ul>
+    </aside>
+
+    <div class="auth-panel">
+        <header class="auth-panel-header">
+            <span class="auth-badge" aria-hidden="true">✍️</span>
+            <h2 class="auth-title">Crear cuenta</h2>
+            <p class="auth-subtitle">Completá tus datos para registrarte.</p>
+        </header>
+
+        <form asp-action="Registro" method="post" class="auth-form" novalidate>
+            <div asp-validation-summary="ModelOnly" class="auth-alert auth-alert-error" role="alert"></div>
+
+            <div class="auth-field">
+                <label asp-for="NombreUsuario" class="auth-label"></label>
+                <div class="auth-input-wrap">
+                    <svg class="auth-input-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" /></svg>
+                    <input asp-for="NombreUsuario" class="form-control auth-input" placeholder="Ej: andrea.sorto" autocomplete="username" autofocus />
+                </div>
+                <span asp-validation-for="NombreUsuario" class="auth-field-error"></span>
+            </div>
+
+            <div class="auth-field">
+                <label asp-for="Email" class="auth-label"></label>
+                <div class="auth-input-wrap">
+                    <svg class="auth-input-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                    <input asp-for="Email" class="form-control auth-input" placeholder="correo@ejemplo.com" autocomplete="email" />
+                </div>
+                <span asp-validation-for="Email" class="auth-field-error"></span>
+            </div>
+
+            <div class="auth-field">
+                <label asp-for="Password" class="auth-label"></label>
+                <div class="auth-input-wrap">
+                    <svg class="auth-input-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+                    <input asp-for="Password" class="form-control auth-input auth-input-pass" placeholder="••••••••" autocomplete="new-password" />
+                    <button type="button" class="auth-toggle-pass" data-toggle-password aria-label="Mostrar contraseña">Mostrar</button>
+                </div>
+                <small class="auth-hint">Mínimo 6 caracteres, con una mayúscula, una minúscula y un número.</small>
+                <span asp-validation-for="Password" class="auth-field-error"></span>
+            </div>
+
+            <div class="auth-field">
+                <label asp-for="ConfirmarPassword" class="auth-label"></label>
+                <div class="auth-input-wrap">
+                    <svg class="auth-input-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" /></svg>
+                    <input asp-for="ConfirmarPassword" class="form-control auth-input" placeholder="••••••••" autocomplete="new-password" />
+                </div>
+                <span asp-validation-for="ConfirmarPassword" class="auth-field-error"></span>
+            </div>
+
+            <button type="submit" class="btn auth-btn">Crear cuenta</button>
+        </form>
+
+        <p class="auth-footer">
+            ¿Ya tenés cuenta?
+            <a asp-action="Login">Iniciá sesión</a>
+        </p>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
