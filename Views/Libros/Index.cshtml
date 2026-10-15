@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Libros";
     var autores = (List<Biblioteca.Models.Autor>)ViewBag.Autores;
+    var esAdmin = User.IsInRole(RolesApp.Administrador);
+    var puedeGestionar = esAdmin || User.IsInRole(RolesApp.Bibliotecario);
+    var rol = RolesApp.RolDe(User);
 }
 
 <section class="catalog-header">
@@ -10,8 +13,25 @@
         <span class="hero-eyebrow">Catálogo</span>
         <h2 class="section-title-lg">Lista de Libros</h2>
     </div>
-    <a asp-action="Create" class="btn btn-primary">+ Agregar libro</a>
+    @if (puedeGestionar)
+    {
+        <a asp-action="Create" class="btn btn-primary">+ Agregar libro</a>
+    }
 </section>
+
+@if (!puedeGestionar)
+{
+    <div class="acceso-aviso" role="note">
+        Estás en modo <strong>consulta</strong> como <span class="tag rol-tag rol-lector">@(rol ?? "Lector")</span>.
+        Para agregar, editar o eliminar libros se necesita el rol Bibliotecario o Administrador.
+    </div>
+}
+else if (!esAdmin)
+{
+    <div class="acceso-aviso" role="note">
+        Como <span class="tag rol-tag rol-bibliotecario">Bibliotecario</span> podés agregar y editar libros. Eliminar está reservado al Administrador.
+    </div>
+}
 
 @if (TempData["Mensaje"] != null)
 {
@@ -21,7 +41,11 @@
 @if (!Model.Any())
 {
     <div class="alert alert-secondary">
-        Todavía no hay libros registrados. Hacé clic en <strong>+ Agregar libro</strong> para cargar el primero.
+        Todavía no hay libros registrados.
+        @if (puedeGestionar)
+        {
+            <text>Hacé clic en <strong>+ Agregar libro</strong> para cargar el primero.</text>
+        }
     </div>
 }
 
@@ -51,11 +75,17 @@
             </div>
             <div class="book-catalog-actions">
                 <a asp-action="Details" asp-route-id="@libro.Id" class="btn btn-sm btn-outline-secondary">Ver</a>
-                <a asp-action="Edit" asp-route-id="@libro.Id" class="btn btn-sm btn-outline-secondary">Editar</a>
-                <form asp-action="Delete" asp-route-id="@libro.Id" method="post"
-                      onsubmit="return confirm('¿Eliminar @libro.Titulo?');">
-                    <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
-                </form>
+                @if (puedeGestionar)
+                {
+                    <a asp-action="Edit" asp-route-id="@libro.Id" class="btn btn-sm btn-outline-secondary">Editar</a>
+                }
+                @if (esAdmin)
+                {
+                    <form asp-action="Delete" asp-route-id="@libro.Id" method="post"
+                          onsubmit="return confirm('¿Eliminar @libro.Titulo?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
+                    </form>
+                }
             </div>
         </div>
     }

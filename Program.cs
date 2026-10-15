@@ -32,10 +32,12 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Cuenta/Login";
     options.LogoutPath = "/Cuenta/Logout";
-    options.AccessDeniedPath = "/Cuenta/Login";
+    options.AccessDeniedPath = "/Cuenta/AccesoDenegado";
 });
 
 var app = builder.Build();
+
+await IdentitySeeder.SembrarAsync(app.Services);
 
 if (!app.Environment.IsDevelopment())
 {

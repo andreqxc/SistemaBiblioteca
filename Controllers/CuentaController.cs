@@ -1,3 +1,4 @@
+using Biblioteca.Data;
 using Biblioteca.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -80,6 +81,7 @@ namespace Biblioteca.Controllers
 
             if (resultado.Succeeded)
             {
+                await _userManager.AddToRoleAsync(usuario, RolesApp.Lector);
                 TempData["UsuarioRegistrado"] = usuario.UserName;
                 TempData["RegistroExitoso"] = "Tu cuenta se creó correctamente. Ya podés iniciar sesión.";
                 return RedirectToAction(nameof(Login));
@@ -89,6 +91,13 @@ namespace Biblioteca.Controllers
                 ModelState.AddModelError(string.Empty, error.Description);
 
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult AccesoDenegado(string? returnUrl = null)
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
         }
 
         [HttpPost]

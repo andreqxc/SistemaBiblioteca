@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Detalle del Libro";
     var autor = (Biblioteca.Models.Autor?)ViewBag.Autor;
+    var esAdmin = User.IsInRole(RolesApp.Administrador);
+    var puedeGestionar = esAdmin || User.IsInRole(RolesApp.Bibliotecario);
 }
 
 <section class="catalog-header">
@@ -35,12 +37,22 @@
             <li><span>Autor</span> <strong>@(autor != null ? autor.Nombre + " " + autor.Apellido : "N/A")</strong></li>
         </ul>
 
-        <div class="book-detail-actions">
-            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Editar</a>
-            <form asp-action="Delete" asp-route-id="@Model.Id" method="post"
-                  onsubmit="return confirm('¿Eliminar \'@Model.Titulo\'? Esta acción no se puede deshacer.');">
-                <button type="submit" class="btn btn-outline-danger">Eliminar</button>
-            </form>
-        </div>
+        @if (puedeGestionar)
+        {
+            <div class="book-detail-actions">
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Editar</a>
+                @if (esAdmin)
+                {
+                    <form asp-action="Delete" asp-route-id="@Model.Id" method="post"
+                          onsubmit="return confirm('¿Eliminar \'@Model.Titulo\'? Esta acción no se puede deshacer.');">
+                        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+                    </form>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="acceso-aviso mt-3 mb-0">Tu rol permite consultar este libro, pero no modificarlo.</p>
+        }
     </div>
 </div>

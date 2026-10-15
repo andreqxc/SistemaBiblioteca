@@ -5,10 +5,17 @@
     @if (SignInManager.IsSignedIn(User))
     {
         var nombre = User.Identity?.Name ?? "Usuario";
+        var rol = RolesApp.RolDe(User);
         <li class="nav-item">
             <span class="nav-user" title="@nombre">
                 <span class="nav-user-avatar">@nombre.Substring(0, 1).ToUpper()</span>
-                <span class="nav-user-name">@nombre</span>
+                <span class="nav-user-text">
+                    <span class="nav-user-name">@nombre</span>
+                    @if (rol != null)
+                    {
+                        <span class="nav-user-rol">@rol</span>
+                    }
+                </span>
             </span>
         </li>
         <li class="nav-item">

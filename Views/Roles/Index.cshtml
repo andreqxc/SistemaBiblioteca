@@ -1,0 +1,63 @@
+@model List<UsuarioRolViewModel>
+
+@{
+    ViewData["Title"] = "Roles";
+    var roles = (string[])ViewBag.Roles;
+}
+
+<section class="catalog-header">
+    <div>
+        <span class="hero-eyebrow">Administración</span>
+        <h2 class="section-title-lg">Usuarios y roles</h2>
+    </div>
+</section>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<div class="roles-card">
+    <table class="table roles-table align-middle mb-0">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Correo</th>
+                <th>Rol actual</th>
+                <th>Cambiar rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model)
+            {
+                <tr>
+                    <td><strong>@u.NombreUsuario</strong></td>
+                    <td>@u.Email</td>
+                    <td><span class="tag rol-tag rol-@u.Rol.ToLower()">@u.Rol</span></td>
+                    <td>
+                        <form asp-action="Asignar" method="post" class="roles-form">
+                            <input type="hidden" name="id" value="@u.Id" />
+                            <select name="rol" class="form-select form-select-sm">
+                                @foreach (var r in roles)
+                                {
+                                    <option value="@r" selected="@(r == u.Rol)">@r</option>
+                                }
+                            </select>
+                            <button type="submit" class="btn btn-sm btn-outline-secondary">Guardar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="roles-leyenda">
+    <div><span class="tag rol-tag rol-administrador">Administrador</span> Consulta, agrega, edita y elimina libros. Gestiona roles.</div>
+    <div><span class="tag rol-tag rol-bibliotecario">Bibliotecario</span> Consulta, agrega y edita libros.</div>
+    <div><span class="tag rol-tag rol-lector">Lector</span> Solo consulta el catálogo.</div>
+</div>

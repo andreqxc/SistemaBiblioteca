@@ -833,3 +833,68 @@ a:hover { color: var(--brass-dark); }
 @media (max-width: 576px) {
   .nav-auth { margin-left: 0; padding-top: 0.5rem; flex-direction: row; flex-wrap: wrap; }
 }
+
+/* ===== Autorización y roles ===== */
+.nav-user-text { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.nav-user-rol {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+.rol-tag { text-transform: none; }
+.rol-administrador { background: rgba(161, 61, 52, 0.12); color: #a13d34; }
+.rol-bibliotecario { background: rgba(169, 124, 52, 0.14); color: var(--brass-dark); }
+.rol-lector { background: rgba(51, 81, 63, 0.12); color: var(--forest); }
+
+.acceso-aviso {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brass);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.acceso-denegado {
+  max-width: 560px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.acceso-denegado-icono { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+.acceso-denegado .section-title-lg { margin-bottom: 1rem; }
+.acceso-denegado-acciones { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+.acceso-denegado .btn { border-radius: 6px; font-weight: 600; }
+.acceso-denegado .btn-primary { background: var(--brass); border-color: var(--brass); }
+.acceso-denegado .btn-primary:hover { background: var(--brass-dark); border-color: var(--brass-dark); }
+
+.roles-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.roles-table { --bs-table-bg: transparent; }
+.roles-table th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 0.9rem 1rem;
+}
+.roles-table td { padding: 0.8rem 1rem; border-color: var(--line); }
+.roles-form { display: flex; gap: 0.5rem; align-items: center; margin: 0; min-width: 220px; }
+.roles-form .btn { border-radius: 6px; border-color: var(--line); color: var(--ink); white-space: nowrap; }
+.roles-form .btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.roles-leyenda { display: grid; gap: 0.5rem; color: var(--ink-soft); font-size: 0.9rem; padding-bottom: 2.5rem; }
+.roles-leyenda .tag { min-width: 110px; text-align: center; margin-right: 0.5rem; }
