@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca.Controllers
 {
-    [Authorize(Roles = RolesApp.Administrador)]
+    [Authorize(Roles = RolesApp.Admin)]
     public class RolesController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -51,9 +51,9 @@ namespace Biblioteca.Controllers
             var usuario = await _userManager.FindByIdAsync(id);
             if (usuario == null) return NotFound();
 
-            if (usuario.Id == _userManager.GetUserId(User) && rol != RolesApp.Administrador)
+            if (usuario.Id == _userManager.GetUserId(User) && rol != RolesApp.Admin)
             {
-                TempData["Error"] = "No podés quitarte a vos misma/o el rol de Administrador.";
+                TempData["Error"] = "No podés quitarte a vos misma/o el rol de Admin.";
                 return RedirectToAction(nameof(Index));
             }
 

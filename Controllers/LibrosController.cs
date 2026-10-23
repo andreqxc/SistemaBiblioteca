@@ -108,7 +108,7 @@ namespace Biblioteca.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = RolesApp.Administrador)]
+        [Authorize(Roles = RolesApp.Gestores)]
         public async Task<IActionResult> Delete(int id)
         {
             var libro = await _context.Libros.FindAsync(id);

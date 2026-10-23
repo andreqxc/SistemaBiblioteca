@@ -845,9 +845,9 @@ a:hover { color: var(--brass-dark); }
 }
 
 .rol-tag { text-transform: none; }
-.rol-administrador { background: rgba(161, 61, 52, 0.12); color: #a13d34; }
+.rol-admin { background: rgba(161, 61, 52, 0.12); color: #a13d34; }
 .rol-bibliotecario { background: rgba(169, 124, 52, 0.14); color: var(--brass-dark); }
-.rol-lector { background: rgba(51, 81, 63, 0.12); color: var(--forest); }
+.rol-usuario { background: rgba(51, 81, 63, 0.12); color: var(--forest); }
 
 .acceso-aviso {
   background: var(--card);

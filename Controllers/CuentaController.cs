@@ -81,7 +81,7 @@ namespace Biblioteca.Controllers
 
             if (resultado.Succeeded)
             {
-                await _userManager.AddToRoleAsync(usuario, RolesApp.Lector);
+                await _userManager.AddToRoleAsync(usuario, RolesApp.Usuario);
                 TempData["UsuarioRegistrado"] = usuario.UserName;
                 TempData["RegistroExitoso"] = "Tu cuenta se creó correctamente. Ya podés iniciar sesión.";
                 return RedirectToAction(nameof(Login));

@@ -3,8 +3,7 @@
 @{
     ViewData["Title"] = "Libros";
     var autores = (List<Biblioteca.Models.Autor>)ViewBag.Autores;
-    var esAdmin = User.IsInRole(RolesApp.Administrador);
-    var puedeGestionar = esAdmin || User.IsInRole(RolesApp.Bibliotecario);
+    var puedeGestionar = User.IsInRole(RolesApp.Admin) || User.IsInRole(RolesApp.Bibliotecario);
     var rol = RolesApp.RolDe(User);
 }
 
@@ -22,14 +21,8 @@
 @if (!puedeGestionar)
 {
     <div class="acceso-aviso" role="note">
-        Estás en modo <strong>consulta</strong> como <span class="tag rol-tag rol-lector">@(rol ?? "Lector")</span>.
-        Para agregar, editar o eliminar libros se necesita el rol Bibliotecario o Administrador.
-    </div>
-}
-else if (!esAdmin)
-{
-    <div class="acceso-aviso" role="note">
-        Como <span class="tag rol-tag rol-bibliotecario">Bibliotecario</span> podés agregar y editar libros. Eliminar está reservado al Administrador.
+        Estás en modo <strong>consulta</strong> como <span class="tag rol-tag rol-usuario">@(rol ?? "Usuario")</span>.
+        Para agregar, editar o eliminar libros se necesita el rol Bibliotecario o Admin.
     </div>
 }
 
@@ -79,7 +72,7 @@ else if (!esAdmin)
                 {
                     <a asp-action="Edit" asp-route-id="@libro.Id" class="btn btn-sm btn-outline-secondary">Editar</a>
                 }
-                @if (esAdmin)
+                @if (puedeGestionar)
                 {
                     <form asp-action="Delete" asp-route-id="@libro.Id" method="post"
                           onsubmit="return confirm('¿Eliminar @libro.Titulo?');">
