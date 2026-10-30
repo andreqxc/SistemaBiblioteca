@@ -1,0 +1,38 @@
+@model EstadoPaginaViewModel
+
+<section class="estado-pagina estado-@Model.Variante" aria-labelledby="estado-titulo">
+    <div class="estado-icono" aria-hidden="true">@Model.Icono</div>
+    <h1 id="estado-titulo" class="estado-titulo">@Model.Titulo</h1>
+    <p class="estado-mensaje">@Model.Mensaje</p>
+
+    @if (!string.IsNullOrEmpty(Model.Usuario))
+    {
+        <p class="estado-usuario">
+            Sesión de <strong>@Model.Usuario</strong>
+            @if (!string.IsNullOrEmpty(Model.Rol))
+            {
+                <span class="tag rol-tag rol-@Model.Rol.ToLowerInvariant()">@Model.Rol</span>
+            }
+        </p>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Sugerencia))
+    {
+        <p class="estado-sugerencia">@Model.Sugerencia</p>
+    }
+
+    <div class="estado-acciones">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-estado-principal">Volver al inicio</a>
+        <button type="button" class="btn btn-estado-secundario" onclick="history.back()">Regresar</button>
+    </div>
+
+    <div class="estado-accesos">
+        <p class="estado-accesos-titulo">O seguí navegando por</p>
+        @await Component.InvokeAsync("AccesosRapidos")
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.Referencia))
+    {
+        <p class="estado-referencia">Código de referencia: <code>@Model.Referencia</code></p>
+    }
+</section>

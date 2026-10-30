@@ -1,20 +1,16 @@
 @{
     ViewData["Title"] = "Acceso denegado";
-    var rol = RolesApp.RolDe(User) ?? "sin rol asignado";
+
+    var estado = new EstadoPaginaViewModel
+    {
+        Icono = "🔒",
+        Variante = "denegado",
+        Titulo = "No tenés permiso para acceder aquí",
+        Mensaje = "Tu cuenta no cuenta con los permisos necesarios para ver este recurso o realizar esta acción.",
+        Sugerencia = "Con tu rol podés consultar las secciones disponibles. Si necesitás más permisos, pedile al administrador que revise tu rol.",
+        Usuario = User.Identity?.Name,
+        Rol = RolesApp.RolDe(User)
+    };
 }
 
-<section class="acceso-denegado">
-    <span class="acceso-denegado-icono" aria-hidden="true">🔒</span>
-    <h2 class="section-title-lg">No tenés permiso para esta acción</h2>
-    <p>
-        Iniciaste sesión como <strong>@User.Identity?.Name</strong> con el rol
-        <span class="tag rol-tag rol-@rol.ToLower()">@rol</span>, que no permite realizar esta operación.
-    </p>
-    <p class="text-muted mb-4">
-        Agregar, editar y eliminar libros requiere el rol Bibliotecario o Admin. Con tu rol solo podés consultar el catálogo.
-    </p>
-    <div class="acceso-denegado-acciones">
-        <a asp-controller="Libros" asp-action="Index" class="btn btn-primary">Ir al catálogo</a>
-        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Volver al inicio</a>
-    </div>
-</section>
+<partial name="_EstadoPagina" model="estado" />

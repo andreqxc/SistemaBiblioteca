@@ -1,0 +1,10 @@
+@model List<AccesoRapido>
+
+<nav class="estado-accesos-lista" aria-label="Secciones disponibles">
+    @foreach (var acceso in Model)
+    {
+        <a asp-controller="@acceso.Controlador" asp-action="@acceso.Accion" class="estado-acceso">
+            <span aria-hidden="true">@acceso.Icono</span> @acceso.Texto
+        </a>
+    }
+</nav>
