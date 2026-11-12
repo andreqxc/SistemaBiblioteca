@@ -1,0 +1,72 @@
+@model Biblioteca.ViewModels.ReporteLibrosViewModel
+
+@{
+    ViewData["Title"] = "Reportes de libros";
+}
+
+<section class="catalog-header">
+    <div>
+        <span class="hero-eyebrow">Reportes</span>
+        <h2 class="section-title-lg">Reportes de Libros</h2>
+    </div>
+</section>
+
+<form method="get" class="row g-3 align-items-end mb-4">
+    <div class="col-md-4">
+        <label for="autorId" class="form-label">Autor</label>
+        <select id="autorId" name="autorId" class="form-select">
+            <option value="">Todos los autores</option>
+            @foreach (var autor in Model.Autores)
+            {
+                <option value="@autor.Id" selected="@(Model.AutorId == autor.Id)">@autor.Nombre @autor.Apellido</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="genero" class="form-label">Categoría</label>
+        <select id="genero" name="genero" class="form-select">
+            <option value="">Todas las categorías</option>
+            @foreach (var genero in Model.Generos)
+            {
+                <option value="@genero" selected="@(Model.Genero == genero)">@genero</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-4 d-flex flex-wrap gap-2">
+        <button type="submit" formaction="@Url.Action("Index")" class="btn btn-outline-secondary">Filtrar</button>
+        <button type="submit" formaction="@Url.Action("LibrosPdf")" class="btn btn-primary">Generar reporte PDF</button>
+        <button type="submit" formaction="@Url.Action("LibrosExcel")" class="btn btn-success">Exportar a Excel</button>
+    </div>
+</form>
+
+<div class="alert alert-secondary">
+    Total de libros en el reporte: <strong>@Model.Libros.Count</strong>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered align-middle">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Libro</th>
+                <th>Autor</th>
+                <th>Categoría</th>
+                <th>Año</th>
+                <th>Disponible</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var libro in Model.Libros)
+            {
+                <tr>
+                    <td>@libro.Id</td>
+                    <td>@libro.Titulo</td>
+                    <td>@libro.Autor</td>
+                    <td>@libro.Genero</td>
+                    <td>@libro.Anio</td>
+                    <td>@(libro.Disponible ? "Sí" : "No")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
